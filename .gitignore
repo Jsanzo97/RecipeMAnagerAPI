@@ -1,0 +1,6 @@
+.terraform*
+*terraform*
+files/target/universal/*
+target*
+recipe-manager-api*
+*.tf

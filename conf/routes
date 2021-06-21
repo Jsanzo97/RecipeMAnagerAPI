@@ -1,0 +1,58 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# POST OPERATIONS
+# Create new recipe
+POST    /signUp                      controllers.RecipesApplication.signUp(request: Request)
+POST    /logIn                       controllers.RecipesApplication.logIn(request: Request)
+
+POST    /recipe                      controllers.RecipesApplication.createRecipe(request: Request, username: String)
+
+# GET OPERATIONS
+# Get all recipes
+GET     /recipes                     controllers.RecipesApplication.getRecipes(request: Request, username: String)
+# Get all recipes with specific name
+GET     /recipes/withName            controllers.RecipesApplication.getRecipeWithName(request: Request, username: String, name: String)
+# Get all recipes with more duration than specific duration
+GET     /recipes/withDuration/more   controllers.RecipesApplication.getRecipesWithMoreDuration(request: Request, username: String, duration: Double)
+# Get all recipes with less duration than specific duration
+GET     /recipes/withDuration/less   controllers.RecipesApplication.getRecipesWithLessDuration(request: Request, username: String, duration: Double)
+# Get all recipes with specific difficult
+GET     /recipes/withDifficult       controllers.RecipesApplication.getRecipesWithDifficult(request: Request, username: String, difficult: String)
+# Get all recipes with specific categoryValue
+GET     /recipes/withCategory        controllers.RecipesApplication.getRecipesWithCategory(request: Request, username: String, categoryValue: String)
+# Get all recipes with specific subcategoryValue
+GET     /recipes/withSubcategory     controllers.RecipesApplication.getRecipesWithSubcategory(request: Request, username: String, subcategoryValue: String)
+# Get all difficulties types in the system
+GET     /recipes/difficulties        controllers.RecipesApplication.getDifficulties(request: Request)
+# Get all categories in the system
+GET     /recipes/categories          controllers.RecipesApplication.getCategories(request: Request)
+# Get all subcategories in the system
+GET     /recipes/subcategories       controllers.RecipesApplication.getSubcategories(request: Request)
+# Get all ingredient types in the system
+GET     /recipes/ingredientTypes     controllers.RecipesApplication.getIngredientTypes(request: Request)
+
+# DELETE OPERATIONS
+# Delete all recipes with specific name
+DELETE  /recipe/withName             controllers.RecipesApplication.removeRecipeWithName(request: Request, username: String, name: String)
+
+# PUT OPERATIONS
+# Update all fields for a recipe with specific name
+PUT     /recipe                      controllers.RecipesApplication.updateRecipe(request: Request, username: String, name: String)
+
+# PATCH OPERATIONS
+PATCH   /recipe/updateDescription    controllers.RecipesApplication.updateRecipeDescription(request: Request, username: String, name: String)
+PATCH   /recipe/updateDuration       controllers.RecipesApplication.updateRecipeDuration(request: Request, username: String, name: String)
+PATCH   /recipe/updateDifficult      controllers.RecipesApplication.updateRecipeDifficult(request: Request, username: String, name: String)
+PATCH   /recipe/addIngredients       controllers.RecipesApplication.addRecipeIngredients(request: Request, username: String, name: String)
+PATCH   /recipe/removeIngredients    controllers.RecipesApplication.removeRecipeIngredients(request: Request, username: String, name: String)
+PATCH   /recipe/updateCategory       controllers.RecipesApplication.updateRecipeCategory(request: Request, username: String, name: String)
+PATCH   /recipe/addSubcategories     controllers.RecipesApplication.addRecipeSubcategories(request: Request, username: String, name: String)
+PATCH   /recipe/removeSubcategories  controllers.RecipesApplication.removeRecipeSubcategories(request: Request, username: String, name: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+OPTIONS    /          controllers.OptionsController.options(path: String ?= "")
+OPTIONS    /*path     controllers.OptionsController.options(path)

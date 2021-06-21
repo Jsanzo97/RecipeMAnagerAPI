@@ -1,0 +1,28 @@
+@(recipeList: List[Recipe])
+<?xml version="1.0" encoding="UTF-8" ?>
+<recipes>
+@for(recipe <- recipeList) {
+    <recipe>
+        <name>@recipe.getName()</name>
+        <description>@recipe.getDescription()</description>
+        <duration>@recipe.getDurationInHours()</duration>
+        <difficult>@{Difficult.getDifficultAsString(recipe.getDifficult().getValue())}</difficult>
+        <ingredients>
+            @for(ingredient <- recipe.getIngredients()) {
+                <ingredient>
+                    <name>@ingredient.getName()</name>
+                    <type>@{IngredientType.getIngredientTypeAsString(ingredient.getType().getValue())}</type>
+                    <calories>@ingredient.getCalories()</calories>
+                </ingredient>
+            }
+        </ingredients>
+        <category>@{Category.getCategoryAsString(recipe.getCategory().getValue())}</category>
+        <subcategories>
+            @for(subcategory <- recipe.getSubcategories()) {
+                <subcategory>@{Subcategory.getSubcategoryAsString(subcategory.getValue())}</subcategory>
+            }
+        </subcategories>
+
+    </recipe>
+}
+</recipes>

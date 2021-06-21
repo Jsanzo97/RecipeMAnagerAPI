@@ -1,0 +1,6 @@
+@(ingredientTypes: List[String])
+<ingredientTypes>
+    @for(ingredientType <- ingredientTypes) {
+        <ingredientType>@ingredientType</ingredientType>
+    }
+</ingredientTypes>

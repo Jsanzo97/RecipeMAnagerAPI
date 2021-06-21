@@ -1,0 +1,6 @@
+@(subcategories: List[String])
+<subcategories>
+    @for(subcategory <- subcategories) {
+    <subcategory>@subcategory</subcategory>
+    }
+</subcategories>

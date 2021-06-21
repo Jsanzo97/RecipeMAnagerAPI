@@ -1,0 +1,35 @@
+BODY_IS_EMPTY_ERROR_DESCRIPTION = Body is empty and it is necessary
+WRONG_PARAMETERS_ERROR_DESCRIPTION = Parameters are wrong, please check it
+USERNAME_ALREADY_EXISTS_ERROR_DESCRIPTION = A user with the same username already exists
+USERNAME_NOT_EXISTS_ERROR_DESCRIPTION = No user was found with this username
+WRONG_PASSWORD_ERROR_DESCRIPTION = Password is incorrect
+RECIPE_ALREADY_EXISTS_ERROR_DESCRIPTION = A recipe with the same name already exists
+RECIPE_NOT_EXISTS_ERROR_DESCRIPTION = No recipe was found with this name
+OK_OPERATION_RESULT = Operation resolved successfully
+
+MISSING_VALUE_FIELD = Missing value field and it is mandatory
+VALUE_CANNOT_BE_EMPTY = Value field cannot be empty
+
+MISSING_INGREDIENT_NAME = Missing ingredient name field value and it is mandatory
+EMPTY_INGREDIENT_NAME = Ingredient name field value cannot be empty
+MISSING_INGREDIENT_TYPE = Missing ingredient type field value and it is mandatory
+MISSING_INGREDIENT_CALORIES = Missing calories value and it is mandatory
+CALORIES_UNDER_MIN_VALUE = Minimum value for calories is 0
+
+MISSING_RECIPE_NAME = Missing recipe name field value and it is mandatory
+EMPTY_RECIPE_NAME = Recipe name field value cannot be empty
+MISSING_RECIPE_DESCRIPTION = Missing recipe description field value and it is mandatory
+EMPTY_RECIPE_DESCRIPTION = Recipe description field value cannot be empty
+MISSING_RECIPE_DURATION = Missing recipe duration field value and it is mandatory
+DURATION_UNDER_MIN_VALUE = Minimum value for recipe duration is 0
+MISSING_RECIPE_DIFFICULT = Missing recipe difficult field value and it is mandatory
+MISSING_RECIPE_INGREDIENTS = Missing recipe ingredients field value and it is mandatory
+EMPTY_INGREDIENTS = There should be at least one ingredient
+MISSING_RECIPE_CATEGORY = Missing recipe category field value and it is mandatory
+MISSING_RECIPE_SUBCATEGORY = Missing recipe subcategory field value and it is mandatory
+EMPTY_SUBCATEGORIES = There should be at least one subcategory
+
+MISSING_USERNAME = Missing username field value and it is mandatory
+EMPTY_USERNAME = Username field value cannot be empty
+MISSING_PASSWORD = Missing password field value and it is mandatory
+EMPTY_PASSWORD = Password field value cannot be empty

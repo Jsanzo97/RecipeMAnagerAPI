@@ -1,0 +1,6 @@
+@(difficulties: List[String])
+<difficulties>
+    @for(difficult <- difficulties) {
+        <difficult>@difficult</difficult>
+    }
+</difficulties>
